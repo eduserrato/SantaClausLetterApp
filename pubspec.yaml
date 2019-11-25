@@ -57,28 +57,28 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-      - family: Cinzel Decorative
+      - family: Cinzel Decorative #Title of App 
         fonts:
           - asset: assets/fonts/CinzelDecorative-Regular.ttf
           - asset: assets/fonts/CinzelDecorative-Bold.ttf
             
-      - family: Coming Soon
+      - family: Coming Soon #Kids handwriting
         fonts:
           - asset: assets/fonts/ComingSoon-Regular.ttf
 
-      - family: Great Vibes
+      - family: Great Vibes #Dear [kid name] line
         fonts:
           - asset: assets/fonts/GreatVibes-Regular.ttf  
-      - family: Mrs Saint Delafield
+      - family: Mrs Saint Delafield #Santas signature
         fonts:
           - asset: assets/fonts/MrsSaintDelafield-Regular.ttf 
 
-      - family: Tangerine
+      - family: Tangerine #Body of Santas letter
         fonts:
          - asset: assets/fonts/Tangerine-Regular.ttf 
          - asset: assets/fonts/Tangerine-Bold.ttf 
   uses-material-design: true
-  #         weight: 700
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
