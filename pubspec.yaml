@@ -38,7 +38,7 @@ flutter:
   # The following line ensures that the Material Icons font is
   # included with your application, so that you can use the icons in
   # the material Icons class.
-  uses-material-design: true
+  
 
   # To add assets to your application, add an assets section, like this:
   # assets:
@@ -56,17 +56,29 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
-  #   - family: Trajan Pro
-  #     fonts:
-  #       - asset: fonts/TrajanPro.ttf
-  #       - asset: fonts/TrajanPro_Bold.ttf
-  #         weight: 700
+  fonts:
+      - family: Cinzel Decorative #Title of App 
+        fonts:
+          - asset: lib/assets/fonts/CinzelDecorative-Regular.ttf
+          - asset: lib/assets/fonts/CinzelDecorative-Bold.ttf
+            
+      - family: Coming Soon #Kids handwriting
+        fonts:
+          - asset: lib/assets/fonts/ComingSoon-Regular.ttf
+
+      - family: Great Vibes #Dear [kid name] line
+        fonts:
+          - asset: lib/assets/fonts/GreatVibes-Regular.ttf  
+      - family: Mrs Saint Delafield #Santas signature
+        fonts:
+          - asset: lib/assets/fonts/MrsSaintDelafield-Regular.ttf 
+
+      - family: Tangerine #Body of Santas letter
+        fonts:
+         - asset: lib/assets/fonts/Tangerine-Regular.ttf 
+         - asset: lib/assets/fonts/Tangerine-Bold.ttf 
+  uses-material-design: true
+
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages

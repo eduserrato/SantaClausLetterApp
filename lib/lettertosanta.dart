@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:santa_claus_letter/screens/loginscreen.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -95,6 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: ListView(
           
           children: <Widget>[
+<<<<<<< HEAD:lib/lettertosanta.dart
             Padding(padding: EdgeInsets.all(5),),
             Text( "         Dear Santa,"),
             new Row(children: <Widget>[
@@ -113,6 +116,18 @@ Padding(padding: EdgeInsets.all(15),),
             ],)
 ,
               
+=======
+            Text("Login? "),
+            IconButton(
+              icon: Icon(Icons.check_circle_outline),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+              }
+            ),
+            Text(
+              'You have pushed the button this many times:',
+            ),
+>>>>>>> b2719a92b977b8249ff39d5374c8a96f90aa13a1:lib/main.dart
             Text(
               '$_counter',
               style: Theme.of(context).textTheme.display1,
@@ -120,11 +135,13 @@ Padding(padding: EdgeInsets.all(15),),
           ],
         ),
       ),
+      
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.send),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    
     );
   }
 }
