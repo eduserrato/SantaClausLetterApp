@@ -5,6 +5,17 @@ A new Flutter project.
 ## Getting Started
 
 ## Color scheme 
+## Red
+Color c = Color(0xffa31621);
+## Grey
+Color c = Color(0xffced3dc);
+
+## Dark Grey
+Color c = Color(0xff2f4550);
+
+## Green
+Color c = Color(0xff08605f);
+
 This project is a starting point for a Flutter application.
 
 A few resources to get you started if this is your first Flutter project:
