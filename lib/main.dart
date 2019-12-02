@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:santa_claus_letter/screens/loginscreen.dart';
+
 
 void main() => runApp(MyApp());
 
@@ -91,6 +93,13 @@ class _MyHomePageState extends State<MyHomePage> {
           // horizontal).
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            Text("Login? "),
+            IconButton(
+              icon: Icon(Icons.check_circle_outline),
+              onPressed: () {
+                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+              }
+            ),
             Text(
               'You have pushed the button this many times:',
             ),
@@ -101,11 +110,13 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+      
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
+    
     );
   }
 }
