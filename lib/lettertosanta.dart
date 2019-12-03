@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:santa_claus_letter/screens/loginscreen.dart';
 
-
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -44,14 +43,16 @@ class MyHomePage extends StatefulWidget {
   @override
   _MyHomePageState createState() => _MyHomePageState();
 }
-class BaseLayout extends StatelessWidget{
+
+class BaseLayout extends StatelessWidget {
   @override
-  Widget build(BuildContext context){
+  Widget build(BuildContext context) {
     return Scaffold(
       body: Container(
         decoration: BoxDecoration(
           image: DecorationImage(
-            image: AssetImage("http://trail.pugetsound.edu/wp-content/uploads/2010/12/Jonathan_G_Meath_portrays_Santa_Claus.jpg"),
+            image: AssetImage(
+                "http://trail.pugetsound.edu/wp-content/uploads/2010/12/Jonathan_G_Meath_portrays_Santa_Claus.jpg"),
             fit: BoxFit.cover,
           ),
         ),
@@ -76,72 +77,70 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   @override
-  
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
     // by the _incrementCounter method above.
-    //
+     Color c = const Color(0xffa31621);
     // The Flutter framework has been optimized to make rerunning build methods
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-        backgroundColor: Colors.red[600]
-      ),
+          // Here we take the value from the MyHomePage object that was created by
+          // the App.build method, and use it to set our appbar title.
+          title: Text(widget.title),
+          backgroundColor: Color.fromARGB(0xff, 163, 22, 33),),
       body: Center(
         // Center is a layout widget. It takes a single child and positions it
         // in the middle of the parent.
         child: ListView(
-          
           children: <Widget>[
-<<<<<<< HEAD:lib/lettertosanta.dart
-            Padding(padding: EdgeInsets.all(5),),
-            Text( "         Dear Santa,"),
-            new Row(children: <Widget>[
-              
- Padding(padding: EdgeInsets.all(15),),
-Flexible(  child:            TextField(
-                    maxLines: 50,
-                    decoration: InputDecoration(
-                      border: OutlineInputBorder(),
-                      labelText: 'Write here your letter to Santa.',
-                    )),)  , 
-Padding(padding: EdgeInsets.all(15),),
-
-              
-
-            ],)
-,
-              
-=======
-            Text("Login? "),
-            IconButton(
-              icon: Icon(Icons.check_circle_outline),
-              onPressed: () {
-                Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
-              }
+            Padding(
+              padding: EdgeInsets.all(5),
             ),
-            Text(
-              'You have pushed the button this many times:',
-            ),
->>>>>>> b2719a92b977b8249ff39d5374c8a96f90aa13a1:lib/main.dart
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.display1,
+            Text("         Dear Santa,"),
+            new Row(
+              children: <Widget>[
+                Padding(
+                  padding: EdgeInsets.all(15),
+                ),
+                Flexible(
+                  child: TextField(
+                      maxLines: 50,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Write here your letter to Santa.',
+                      )),
+                ),
+                Padding(
+                  padding: EdgeInsets.all(15),
+                ),
+              ],
             ),
           ],
         ),
       ),
-      
+
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
         child: Icon(Icons.send),
       ), // This trailing comma makes auto-formatting nicer for build methods.
-    
     );
   }
 }
+
+// Text("Login? "),
+//             IconButton(
+//               icon: Icon(Icons.check_circle_outline),
+//               onPressed: () {
+//                 Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
+//               }
+//             ),
+//             Text(
+//               'You have pushed the button this many times:',
+//             ),
+//             Text(
+//               '$_counter',
+//               style: Theme.of(context).textTheme.display1,
+//             ),
