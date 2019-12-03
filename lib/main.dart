@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'lettertosanta.dart';
+import 'screens/lettertosanta.dart';
 
 void main() => runApp(MyApp());
 
