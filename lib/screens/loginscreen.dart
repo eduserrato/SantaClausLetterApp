@@ -23,7 +23,10 @@ class _LoginScreenState extends State<LoginScreen> {
               TextField(controller: emailCtrl),
               TextField(controller: phoneCtrl, obscureText: true),
 
-              RaisedButton(child: Text("Go"), onPressed: () {
+              RaisedButton(child: Text("Go"), 
+              shape: CircleBorder(),
+              
+              onPressed: () {
                 print("Success");
               }),
             ]
