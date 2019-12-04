@@ -22,10 +22,9 @@ class _LoginScreenState extends State<LoginScreen> {
             children: <Widget>[
               TextField(controller: emailCtrl),
               TextField(controller: phoneCtrl, obscureText: true),
-
               RaisedButton(child: Text("Go"), 
               shape: CircleBorder(),
-              
+              color: Color.fromARGB(0xff, 8, 96, 95),
               onPressed: () {
                 print("Success");
               }),
