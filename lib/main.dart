@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:santa_claus_letter/screens/loadingscreen.dart';
 
 import 'package:santa_claus_letter/screens/loginscreen.dart';
+import 'package:santa_claus_letter/screens/tempnavscreen.dart';
 
 import 'screens/lettertosanta.dart';
 
@@ -18,8 +19,10 @@ class MyApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
+      
+      
      // home: LetterScreen(title: 'Letter Writting Home Page'),
-      home: Loading(),
+      home: TempNavScreen(),
     );
     
   }
