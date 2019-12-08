@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 
 final appTheme = ThemeData(
-  primarySwatch: Colors.yellow,
+  primaryColor: treeGreen,
+  buttonColor: santaRed,
+  accentColor: darkGrey,
   textTheme: TextTheme(
     title: TextStyle(
       fontFamily: 'Cinzel Decorative',
@@ -15,3 +17,7 @@ final appTheme = ThemeData(
     
   ),
 );
+
+Color santaRed = const Color(0xa31621); 
+Color treeGreen = const Color(0x08605f); 
+Color darkGrey = const Color(0x2f4550); 
