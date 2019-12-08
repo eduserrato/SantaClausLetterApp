@@ -1,33 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:santa_claus_letter/screens/loginscreen.dart';
 
-void main() => runApp(MyApp());
-
-class MyApp extends StatelessWidget {
-  // This widget is the root of your application.
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'Letter Writting',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: LetterScreen(title: 'Letter Writting Home Page'),
-    );
-  }
-}
-
 class LetterScreen extends StatefulWidget {
-  LetterScreen({Key key, this.title}) : super(key: key);
+  LetterScreen({Key key}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -37,8 +12,6 @@ class LetterScreen extends StatefulWidget {
   // case the title) provided by the parent (in this case the App widget) and
   // used by the build method of the State. Fields in a Widget subclass are
   // always marked "final".
-
-  final String title;
 
   @override
   _LetterScreenState createState() => _LetterScreenState();
@@ -53,7 +26,7 @@ class BaseLayout extends StatelessWidget {
           image: DecorationImage(
             image: AssetImage(
                 "http://trail.pugetsound.edu/wp-content/uploads/2010/12/Jonathan_G_Meath_portrays_Santa_Claus.jpg"),
-            fit: BoxFit.cover,
+            fit: BoxFit.contain,
           ),
         ),
         child: null /* add child content here */,
@@ -78,68 +51,44 @@ class _LetterScreenState extends State<LetterScreen> {
 
   @override
   Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
     return Scaffold(
       appBar: AppBar(
-          // Here we take the value from the MyHomePage object that was created by
-          // the App.build method, and use it to set our appbar title.
-          title: Text(widget.title),
-          backgroundColor: Color.fromARGB(0xff, 163, 22, 33),),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: ListView(
-          children: <Widget>[
-            Padding(
-              padding: EdgeInsets.all(5),
-            ),
-            Text("         Dear Santa,"),
-            new Row(
-              children: <Widget>[
-                Padding(
-                  padding: EdgeInsets.all(15),
-                ),
-                Flexible(
-                  child: TextField(
-                      maxLines: 50,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Write here your letter to Santa.',
-                      )),
-                ),
-                Padding(
-                  padding: EdgeInsets.all(15),
-                ),
-              ],
-            ),
-          ],
-        ),
+        title: Text('Letter'),
+        backgroundColor: Color.fromARGB(0xff, 163, 22, 33),
       ),
-
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.send),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      body: Column(
+        children: <Widget>[
+          Padding(
+            padding: const EdgeInsets.all(15.0),
+            child: Container(
+              
+              height: 40,
+              child: Text(
+                "Dear Santa,",
+                style: TextStyle(
+                  fontFamily: 'Tangerine',
+                  fontSize: 40,
+                ),
+                textAlign: TextAlign.start,
+              ),
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Container(
+              height: 600,
+              child: TextField(
+                  
+                  maxLines: 50,
+                  decoration: InputDecoration(
+                    border: OutlineInputBorder(),
+                    
+                    labelText: 'Write here your letter to Santa.',
+                  )),
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
-
-// Text("Login? "),
-//             IconButton(
-//               icon: Icon(Icons.check_circle_outline),
-//               onPressed: () {
-//                 Navigator.push(context, MaterialPageRoute(builder: (context) => LoginScreen()));
-//               }
-//             ),
-//             Text(
-//               'You have pushed the button this many times:',
-//             ),
-//             Text(
-//               '$_counter',
-//               style: Theme.of(context).textTheme.display1,
-//             ),
