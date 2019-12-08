@@ -61,7 +61,6 @@ class _LetterScreenState extends State<LetterScreen> {
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Container(
-              
               height: 40,
               child: Text(
                 "Dear Santa,",
@@ -76,18 +75,22 @@ class _LetterScreenState extends State<LetterScreen> {
           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Container(
-              height: 600,
+              height: 500,
               child: TextField(
-                  
                   maxLines: 50,
                   decoration: InputDecoration(
                     border: OutlineInputBorder(),
-                    
                     labelText: 'Write here your letter to Santa.',
                   )),
             ),
           ),
+
         ],
+      ),
+      floatingActionButton: FloatingActionButton(
+        backgroundColor: Color.fromARGB(0xFF, 0, 73, 60),
+        child: Icon(Icons.send),
+        onPressed: () {},
       ),
     );
   }
