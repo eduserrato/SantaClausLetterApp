@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:santa_claus_letter/common/theme.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -22,9 +23,10 @@ class _LoginScreenState extends State<LoginScreen> {
               
               TextField(controller: phoneCtrl, obscureText: true),
               RaisedButton(
-                  child: Text("Go"),
+                  child: Text("Go",
+                  ),
                   shape: CircleBorder(),
-                  color: Color.fromARGB(0xff, 8, 96, 95),
+                
                   onPressed: () {
                     print("Success");
                   }),
