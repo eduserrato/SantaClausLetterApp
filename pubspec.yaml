@@ -60,24 +60,24 @@ flutter:
   fonts:
       - family: Cinzel Decorative #Title of App 
         fonts:
-          - asset: assets/fonts/CinzelDecorative-Regular.ttf
-          - asset: assets/fonts/CinzelDecorative-Bold.ttf
+          - asset: lib/assets/fonts/CinzelDecorative-Regular.ttf
+          - asset: lib/assets/fonts/CinzelDecorative-Bold.ttf
             
       - family: Coming Soon #Kids handwriting
         fonts:
-          - asset: assets/fonts/ComingSoon-Regular.ttf
+          - asset: lib/assets/fonts/ComingSoon-Regular.ttf
 
       - family: Great Vibes #Dear [kid name] line
         fonts:
-          - asset: assets/fonts/GreatVibes-Regular.ttf  
+          - asset: lib/assets/fonts/GreatVibes-Regular.ttf  
       - family: Mrs Saint Delafield #Santas signature
         fonts:
-          - asset: assets/fonts/MrsSaintDelafield-Regular.ttf 
+          - asset: lib/assets/fonts/MrsSaintDelafield-Regular.ttf 
 
       - family: Tangerine #Body of Santas letter
         fonts:
-         - asset: assets/fonts/Tangerine-Regular.ttf 
-         - asset: assets/fonts/Tangerine-Bold.ttf 
+         - asset: lib/assets/fonts/Tangerine-Regular.ttf 
+         - asset: lib/assets/fonts/Tangerine-Bold.ttf 
   uses-material-design: true
 
   #
