@@ -3,7 +3,7 @@ import 'package:santa_claus_letter/screens/loadingscreen.dart';
 
 import 'package:santa_claus_letter/screens/loginscreen.dart';
 import 'package:santa_claus_letter/screens/tempnavscreen.dart';
-
+import 'package:santa_claus_letter/common/theme.dart';
 import 'screens/lettertosanta.dart';
 
 
@@ -15,10 +15,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Go to respective pages',
-      theme: ThemeData(
-        
-        primarySwatch: Colors.blue,
-      ),
+      theme: appTheme,
       
       
      // home: LetterScreen(title: 'Letter Writting Home Page'),
