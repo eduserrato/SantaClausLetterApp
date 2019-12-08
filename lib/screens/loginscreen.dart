@@ -1,5 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:santa_claus_letter/common/theme.dart';
+import 'package:flutter_mailer/flutter_mailer.dart';
+import 'dart:async';
+import 'dart:io';
 
+import 'lettertosanta.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -14,20 +19,33 @@ class _LoginScreenState extends State<LoginScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Info")), 
-        body: Padding(
-          padding: const EdgeInsets.all(15.0),
-          child: Column(
+        title: Text("Add email"),
+        backgroundColor: Color.fromARGB(0xff, 163, 22, 33)),
+      body: Padding(
+        padding: const EdgeInsets.all(15.0),
+        child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              TextField(controller: emailCtrl),
-              TextField(controller: phoneCtrl, obscureText: true),
-
-              RaisedButton(child: Text("Go"), onPressed: () {
-                print("Success");
-              }),
-            ]
-        ),
+              TextField(controller: emailCtrl, decoration: InputDecoration(helperText: 'email'),),
+              
+              
+              RaisedButton(
+                  child: Text("Go",
+                    style: TextStyle(
+                      fontFamily: 'Cinzel Decorative',
+                      color: Colors.white),
+                  ),
+                  color: Color.fromARGB(0xFF, 163, 21, 33),
+                  
+                  shape: CircleBorder(),
+                
+                  onPressed: () {
+                    print("Success");
+                     Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LetterScreen()));
+                
+                  }),
+            ]),
       ),
     );
   }

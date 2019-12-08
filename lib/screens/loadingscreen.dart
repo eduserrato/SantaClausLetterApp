@@ -17,45 +17,64 @@ class _LoadingState extends State<Loading> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 100.0,
-      height: 100.0,
-      child: Center(
-        child: Stack(
-          children: <Widget>[
-            Dot(
-              color: Colors.green,
-              radius: 30.0,
-            ),
-            Transform.translate(
-              offset: Offset(radius * cos(pi/4), radius * sin(pi/4)),
-              child: Dot(radius: 5.0, color: Colors.blue),
-            ), Transform.translate(
-              offset: Offset(radius * cos(2*pi/4), radius * sin(2*pi/4)),
-              child: Dot(radius: 5.0, color: Colors.blue),
-            ), Transform.translate(
-              offset: Offset(radius * cos(3*pi/4), radius * sin(3*pi/4)),
-              child: Dot(radius: 5.0, color: Colors.blue),
-            ), Transform.translate(
-              offset: Offset(radius * cos(4*pi/4), radius * sin(4*pi/4)),
-              child: Dot(radius: 5.0, color: Colors.blue),
-            ),
-             Transform.translate(
-              offset: Offset(radius * cos(5*pi/4), radius * sin(5*pi/4)),
-              child: Dot(radius: 5.0, color: Colors.blue),
-            ), Transform.translate(
-              offset: Offset(radius * cos(6*pi/4), radius * sin(6*pi/4)),
-              child: Dot(radius: 5.0, color: Colors.blue),
-            ),
-             Transform.translate(
-              offset: Offset(radius * cos(7*pi/4), radius * sin(7*pi/4)),
-              child: Dot(radius: 5.0, color: Colors.blue),
-            ),
-             Transform.translate(
-              offset: Offset(radius * cos(8*pi/4), radius * sin(8*pi/4)),
-              child: Dot(radius: 5.0, color: Colors.blue),
-            ),
-          ],
+    return Scaffold(
+      appBar: AppBar(
+          leading: IconButton(
+              icon: Icon(Icons.arrow_back),
+              onPressed: () {
+                Navigator.pop(context);
+              })),
+      body: Container(
+        width: 100.0,
+        height: 100.0,
+        child: Center(
+          child: Stack(
+            children: <Widget>[
+              Dot(
+                color: Colors.green,
+                radius: 30.0,
+              ),
+              Transform.translate(
+                offset: Offset(radius * cos(pi / 4), radius * sin(pi / 4)),
+                child: Dot(radius: 5.0, color: Colors.blue),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(2 * pi / 4), radius * sin(2 * pi / 4)),
+                child: Dot(radius: 5.0, color: Colors.blue),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(3 * pi / 4), radius * sin(3 * pi / 4)),
+                child: Dot(radius: 5.0, color: Colors.blue),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(4 * pi / 4), radius * sin(4 * pi / 4)),
+                child: Dot(radius: 5.0, color: Colors.blue),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(5 * pi / 4), radius * sin(5 * pi / 4)),
+                child: Dot(radius: 5.0, color: Colors.blue),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(6 * pi / 4), radius * sin(6 * pi / 4)),
+                child: Dot(radius: 5.0, color: Colors.blue),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(7 * pi / 4), radius * sin(7 * pi / 4)),
+                child: Dot(radius: 5.0, color: Colors.blue),
+              ),
+              Transform.translate(
+                offset:
+                    Offset(radius * cos(8 * pi / 4), radius * sin(8 * pi / 4)),
+                child: Dot(radius: 5.0, color: Colors.blue),
+              ),
+            ],
+          ),
         ),
       ),
     );
