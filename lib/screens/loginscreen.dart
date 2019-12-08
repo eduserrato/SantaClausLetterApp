@@ -18,14 +18,8 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              // (DecoratedBox
-
-              //   child: TextField(controller: emailCtrl),
-              // ),
-              Padding(
-                padding: const EdgeInsets.all(8.0),
-                child: TextField(controller: emailCtrl),
-              ),
+              TextField(controller: emailCtrl),
+              
               TextField(controller: phoneCtrl, obscureText: true),
               RaisedButton(
                   child: Text("Go"),
