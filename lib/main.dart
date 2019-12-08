@@ -5,6 +5,7 @@ import 'package:santa_claus_letter/screens/loginscreen.dart';
 import 'package:santa_claus_letter/screens/tempnavscreen.dart';
 import 'package:santa_claus_letter/common/theme.dart';
 import 'screens/lettertosanta.dart';
+import 'package:flutter_mailer/flutter_mailer.dart';
 
 
 void main() => runApp(MyApp());

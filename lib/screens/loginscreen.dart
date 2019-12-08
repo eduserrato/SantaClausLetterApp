@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:santa_claus_letter/common/theme.dart';
+import 'package:flutter_mailer/flutter_mailer.dart';
+import 'dart:async';
+import 'dart:io';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -24,7 +27,12 @@ class _LoginScreenState extends State<LoginScreen> {
               TextField(controller: phoneCtrl, obscureText: true),
               RaisedButton(
                   child: Text("Go",
+                    style: TextStyle(
+                      fontFamily: 'Cinzel Decorative',
+                      color: Colors.white),
                   ),
+                  color: Color.fromARGB(0xFF, 163, 21, 33),
+                  
                   shape: CircleBorder(),
                 
                   onPressed: () {
