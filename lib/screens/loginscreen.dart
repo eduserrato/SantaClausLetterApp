@@ -4,6 +4,8 @@ import 'package:flutter_mailer/flutter_mailer.dart';
 import 'dart:async';
 import 'dart:io';
 
+import 'lettertosanta.dart';
+
 class LoginScreen extends StatefulWidget {
   @override
   _LoginScreenState createState() => _LoginScreenState();
@@ -22,9 +24,9 @@ class _LoginScreenState extends State<LoginScreen> {
         child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
-              TextField(controller: emailCtrl),
+              TextField(controller: emailCtrl, decoration: InputDecoration(helperText: 'email'),),
               
-              TextField(controller: phoneCtrl, obscureText: true),
+              
               RaisedButton(
                   child: Text("Go",
                     style: TextStyle(
@@ -37,6 +39,9 @@ class _LoginScreenState extends State<LoginScreen> {
                 
                   onPressed: () {
                     print("Success");
+                     Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LetterScreen()));
+                
                   }),
             ]),
       ),
