@@ -74,6 +74,7 @@ class _LetterScreenState extends State<LetterScreen> {
                    decoration: InputDecoration(
                      border: OutlineInputBorder(),
                      labelText: 'Write here your letter to Santa.',
+                     
                    )),
              ),
            ),
