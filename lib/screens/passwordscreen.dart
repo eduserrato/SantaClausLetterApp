@@ -39,8 +39,8 @@ class _PasswordscreenState extends State<Passwordscreen> {
                 
                   onPressed: () {
                     print("Success");
-                     Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => secretscreen()));
+                    // Navigator.push(context,
+                     // MaterialPageRoute(builder: (context) => sec()));
                 
                   }),
         ],

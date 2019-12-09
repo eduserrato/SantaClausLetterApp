@@ -2,18 +2,18 @@ import 'package:flutter/material.dart';
 import 'lettertosanta.dart';
 import 'passwordscreen.dart';
 
-class secretscreen extends StatefulWidget {
+class UpdateNotesScreen extends StatefulWidget {
   String updateNotesTitle = "Update Notes";
   String updateNotesBody = "Version Santa is coming to town and other important messages";
  
 
-  secretscreen({Key key}) : super(key: key);
+  UpdateNotesScreen({Key key}) : super(key: key);
 
   @override
-  _secretscreenState createState() => _secretscreenState();
+  _UpdateNotesScreen createState() => _UpdateNotesScreen();
 }
 
-class _secretscreenState extends State<secretscreen> {
+class _UpdateNotesScreen extends State<UpdateNotesScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
