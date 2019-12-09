@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:santa_claus_letter/screens/loginscreen.dart';
+import 'package:santa_claus_letter/screens/tempnavscreen.dart';
 
 class LetterScreen extends StatefulWidget {
   LetterScreen({Key key}) : super(key: key);
-
+ 
+ 
   @override
   _LetterScreenState createState() => _LetterScreenState();
 }
@@ -29,6 +31,38 @@ class BaseLayout extends StatelessWidget {
 class _LetterScreenState extends State<LetterScreen> {
   int _counter = 0;
 
+createAlertDialog(BuildContext context){
+    return showDialog(context: context,builder: (context){
+      return AlertDialog(
+        title: Icon(Icons.email),
+      content: Text("Your Letter Has Been Sent To Santa"),
+      actions: <Widget>[
+        Row(children: <Widget>[
+RaisedButton(
+                  onPressed: () {
+                      Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => TempNavScreen())
+                    );
+                  },
+                  child: Text("Update Notes"), color: Colors.red,
+                ),Padding(
+                  padding: const EdgeInsets.all(8.0),
+                  child: RaisedButton(
+                    onPressed: () {
+                        Navigator.push(context,
+                        MaterialPageRoute(builder: (context) => TempNavScreen())
+                      );
+                    },
+                    child: Text("OK"), color: Colors.red,
+                  ),
+                ),
+        ],)
+        
+      ],      );
+    });
+    
+  }
+
   void _incrementCounter() {
     setState(() {
       // This call to setState tells the Flutter framework that something has
@@ -47,7 +81,7 @@ class _LetterScreenState extends State<LetterScreen> {
         title: Text('Letter'),
         backgroundColor: Color.fromARGB(0xff, 163, 22, 33),
       ),
-      body: Column(
+      body: ListView(
         children: <Widget>[
           Padding(
             padding: const EdgeInsets.all(15.0),
@@ -63,24 +97,22 @@ class _LetterScreenState extends State<LetterScreen> {
               ),
             ),
           ),
-          
-          Padding(
+           Padding(
             padding: const EdgeInsets.all(8.0),
             child: Flex(
               direction: Axis.horizontal,
               children: <Widget>[
                
-              
                
                 Container(
-                  
-                  height: 500,
+
+                 child: Expanded(
                   child: TextField(
                       maxLines: 50,
                       decoration: InputDecoration(
                         border: OutlineInputBorder(),
                         labelText: 'Write here your letter to Santa.',
-                      )),
+                      )),),
                 ),
               ],
             ),
@@ -90,7 +122,9 @@ class _LetterScreenState extends State<LetterScreen> {
       floatingActionButton: FloatingActionButton(
         backgroundColor: Color.fromARGB(0xFF, 0, 73, 60),
         child: Icon(Icons.send),
-        onPressed: () {},
+        onPressed: () {
+          createAlertDialog(context);
+        },
       ),
     );
   }
