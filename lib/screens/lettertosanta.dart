@@ -4,8 +4,6 @@ import 'package:santa_claus_letter/screens/loginscreen.dart';
 class LetterScreen extends StatefulWidget {
   LetterScreen({Key key}) : super(key: key);
 
- 
-
   @override
   _LetterScreenState createState() => _LetterScreenState();
 }
@@ -65,19 +63,28 @@ class _LetterScreenState extends State<LetterScreen> {
               ),
             ),
           ),
+          
           Padding(
             padding: const EdgeInsets.all(8.0),
-            child: Container(
-              height: 500,
-              child: TextField(
-                  maxLines: 50,
-                  decoration: InputDecoration(
-                    border: OutlineInputBorder(),
-                    labelText: 'Write here your letter to Santa.',
-                  )),
+            child: Flex(
+              direction: Axis.horizontal,
+              children: <Widget>[
+               
+              
+               
+                Container(
+                  
+                  height: 500,
+                  child: TextField(
+                      maxLines: 50,
+                      decoration: InputDecoration(
+                        border: OutlineInputBorder(),
+                        labelText: 'Write here your letter to Santa.',
+                      )),
+                ),
+              ],
             ),
           ),
-
         ],
       ),
       floatingActionButton: FloatingActionButton(
