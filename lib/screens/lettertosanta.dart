@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:santa_claus_letter/common/theme.dart';
 import 'package:santa_claus_letter/screens/loginscreen.dart';
+import 'package:santa_claus_letter/screens/tempnavscreen.dart';
 
 class LetterScreen extends StatefulWidget {
   LetterScreen({Key key}) : super(key: key);
@@ -63,35 +65,32 @@ class _LetterScreenState extends State<LetterScreen> {
               ),
             ),
           ),
-          
-          Padding(
-            padding: const EdgeInsets.all(8.0),
-            child: Flex(
-              direction: Axis.horizontal,
-              children: <Widget>[
-               
-              
-               
-                Container(
-                  
-                  height: 500,
-                  child: TextField(
-                      maxLines: 50,
-                      decoration: InputDecoration(
-                        border: OutlineInputBorder(),
-                        labelText: 'Write here your letter to Santa.',
-                      )),
-                ),
-              ],
-            ),
-          ),
+           Padding(
+             padding: const EdgeInsets.all(8.0),
+             child: Container(
+               height: 500,
+               child: TextField(
+                   maxLines: 50,
+                   decoration: InputDecoration(
+                     border: OutlineInputBorder(),
+                     labelText: 'Write here your letter to Santa.',
+                   )),
+             ),
+           ),
+           RaisedButton(
+             color: Color.fromARGB(0xFF, 163, 21, 33),
+             textColor: Colors.white,
+             child: Text("Send to Santa"),
+             onPressed: () {
+               Navigator.push(context, MaterialPageRoute(
+                 builder: (context) => TempNavScreen()
+               ));
+             },
+           ),
         ],
       ),
-      floatingActionButton: FloatingActionButton(
-        backgroundColor: Color.fromARGB(0xFF, 0, 73, 60),
-        child: Icon(Icons.send),
-        onPressed: () {},
-      ),
+      
+      
     );
   }
 }

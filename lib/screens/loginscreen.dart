@@ -3,7 +3,7 @@ import 'package:santa_claus_letter/common/theme.dart';
 import 'package:flutter_mailer/flutter_mailer.dart';
 import 'dart:async';
 import 'dart:io';
-
+import 'loadingscreen.dart';
 import 'lettertosanta.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -42,7 +42,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   onPressed: () {
                     print("Success");
                      Navigator.push(context,
-                      MaterialPageRoute(builder: (context) => LetterScreen()));
+                      MaterialPageRoute(builder: (context) => Loading()));
                 
                   }),
             ]),
