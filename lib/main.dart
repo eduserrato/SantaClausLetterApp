@@ -15,13 +15,13 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Go to respective pages',
+      title: 'Welcome',
       theme: appTheme,
       
       
      // home: LetterScreen(title: 'Letter Writting Home Page'),
       
-      home: TempNavScreen(),
+      home: LoginScreen(),
     );
     
   }
