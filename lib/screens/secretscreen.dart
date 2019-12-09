@@ -13,7 +13,7 @@ class SecretScreen extends StatefulWidget {
 }
 
 class _SecretScreenState extends State<SecretScreen> {
-  List<String> letters = ['Dear Santa Ive been very good and I want a pony', 'Dear Santa, nevermind ponys are lame. I want a spaceship.']; 
+  List<String> letters = ['Dear Santa, Ive been very good and I want a pony', 'Dear Santa, nevermind ponys are lame. I want a spaceship.']; 
   
 
   @override
@@ -29,7 +29,11 @@ class _SecretScreenState extends State<SecretScreen> {
             Padding(
               padding: const EdgeInsets.all(8.0),
               child: Container(
-                child: Text(letters[0]),
+               
+                child: Text(letters[0],
+                style: TextStyle(
+                 fontFamily: 'Coming Soon',
+                  fontSize: 40,)),
               ),
             ),
             Padding(
