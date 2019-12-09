@@ -1,5 +1,7 @@
 import "package:flutter/material.dart";
 import 'dart:math';
+import 'dart:async';
+import 'lettertosanta.dart';
 
 class Loading extends StatefulWidget {
   final double radius;
@@ -29,7 +31,7 @@ class _LoadingState extends State<Loading>
     dotRadius = widget.dotRadius;
 
     print(dotRadius);
-
+    
     controller = AnimationController(
         lowerBound: 0.0,
         upperBound: 1.0,
@@ -75,6 +77,13 @@ class _LoadingState extends State<Loading>
 
   @override
     Widget build(BuildContext context) {
+    Timer(Duration(seconds: 10), () {
+      Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => LetterScreen()));
+                
+    });
+
+      
     return Scaffold(
       appBar: AppBar(
         title: Text('Loading...'),
@@ -188,9 +197,11 @@ class _LoadingState extends State<Loading>
         ),
       ),
      ),
+    
+     
     );
   }
-
+  
   @override
   void dispose() {
 

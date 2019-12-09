@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:santa_claus_letter/common/theme.dart';
 import 'package:santa_claus_letter/screens/loginscreen.dart';
 import 'package:santa_claus_letter/screens/tempnavscreen.dart';
+import 'package:santa_claus_letter/screens/updatenotesscreen.dart';
 
 class LetterScreen extends StatefulWidget {
   LetterScreen({Key key}) : super(key: key);
@@ -50,7 +52,7 @@ RaisedButton(
                   child: RaisedButton(
                     onPressed: () {
                         Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => TempNavScreen())
+                        MaterialPageRoute(builder: (context) => UpdateNotesScreen())
                       );
                     },
                     child: Text("OK"), color: Colors.red,

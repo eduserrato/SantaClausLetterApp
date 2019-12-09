@@ -3,6 +3,7 @@ import 'package:flutter/widgets.dart';
 import 'lettertosanta.dart';
 import 'loadingscreen.dart';
 import 'loginscreen.dart';
+import 'updatenotesscreen.dart';
 
 class TempNavScreen extends StatelessWidget {
   const TempNavScreen({Key key}) : super(key: key);
@@ -22,6 +23,14 @@ class TempNavScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: <Widget>[
+                RaisedButton(
+                  onPressed: () {
+                      Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => UpdateNotesScreen())
+                    );
+                  },
+                  child: Text("Update Notes"),
+                ),
                 RaisedButton(
                   onPressed: () {
                       Navigator.push(context,
